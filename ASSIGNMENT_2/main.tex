@@ -1,0 +1,76 @@
+\documentclass[a4paper]{article} 
+\input{head}
+
+\begin{document}
+
+%-------------------------------
+%	TITLE SECTION
+%-------------------------------
+
+\fancyhead[C]{}
+\hrule \medskip % Upper rule
+\begin{minipage}{0.295\textwidth} 
+\raggedright
+\footnotesize
+PRAJJWAL SHARMA \hfill\\   
+5TH SEM 19111040\hfill\\
+BIOMEDICAL ENGINEERING
+\end{minipage}
+\begin{minipage}{0.4\textwidth} 
+\centering 
+\large 
+ASSIGNMENT 2\\ 
+\normalsize 
+A.I. AND N.N.\\ 
+\end{minipage}
+\begin{minipage}{0.295\textwidth} 
+\raggedleft
+\today\hfill\\
+\end{minipage}
+\medskip\hrule 
+\bigskip
+
+%-------------------------------
+%	CONTENTS
+%-------------------------------
+
+\section{what is Gödel's incompleteness theorems }
+
+Gödel's incompleteness theorems are two theorems of mathematical logic that are concerned with the limits of provability in formal axiomatic theories.
+
+The first incompleteness theorem states that no consistent system of axioms whose theorems can be listed by an effective procedure (i.e., an algorithm) is capable of proving all truths about the arithmetic of natural numbers. For any such consistent formal system, there will always be statements about natural numbers that are true, but that are unprovable within the system. The second incompleteness theorem, an extension of the first, shows that the system cannot demonstrate its own consistency.
+The incompleteness theorems apply to formal systems that are of sufficient complexity to express the basic arithmetic of the natural numbers and which are consistent, and effectively axiomatized, these concepts being detailed below.There are several properties that a formal system may have, including completeness, consistency, and the existence of an effective axiomatization. The incompleteness theorems show that systems which contain a sufficient amount of arithmetic cannot possess all three of these properties.
+\begin{itemize}
+    \item \textbf{Effective axiomatization}-A formal system is said to be effectively axiomatized  if its set of theorems is a recursively enumerable set
+    \item\textbf{Completeness}-A set of axioms is  complete if, for any statement in the axioms' language, that statement or its negation is provable from the axioms 
+    \item\textbf{Consistency}-A set of axioms is (simply) consistent if there is no statement such that both the statement and its negation are provable from the axioms, and inconsistent otherwise
+    \item\textbf{Systems which contain arithmetic}The incompleteness theorems apply only to formal systems which are able to prove a sufficient collection of facts about the natural numbers. One sufficient collection is the set of theorems of Robinson arithmetic Q. Some systems, such as Peano arithmetic, can directly express statements about natural numbers. Others, such as ZFC set theory, are able to interpret statements about natural numbers into their language. Either of these options is appropriate for the incompleteness theorems.
+\end{itemize}
+
+%------------------------------------------------
+
+\section{First incompleteness theorem}
+\textbf{first incompleteness theorem} states that "Any consistent formal system F within which a certain amount of elementary arithmetic can be carried out is incomplete; i.e., there are statements of the language of F which can neither be proved nor disproved in F."\\
+\textbf{Proof of first theorem}-The proof by contradiction has three essential parts. To begin, choose a formal system that meets the proposed criteria:
+\begin{enumerate}
+    \item Arithmetization of syntax
+    \item Construction of a statement about "provability"
+    \item Diagonalization
+\end{enumerate}
+Alternate proving sketches are
+\begin{itemize}
+    \item Proof by Berry's Paradox
+    \item Computer Verified Proofs
+\end{itemize}
+\bigskip
+
+%------------------------------------------------
+\section{Second incompleteness theorem}
+\textbf{Second incompleteness theorem}-states that  "Assume F is a consistent formalized system which contains elementary arithmetic. Then ${\displaystyle F\not \vdash {\text{Cons}}(F)}{\displaystyle F\not \vdash {\text{Cons}}(F)}."$\\
+This theorem is stronger than the first incompleteness theorem because the statement constructed in the first incompleteness theorem does not directly express the consistency of the system. The proof of the second incompleteness theorem is obtained by formalizing the proof of the first incompleteness theorem within the system F itself.\\
+\textbf{Proof for second incompleteness theorem}-The main difficulty in proving the second incompleteness theorem is to show that various facts about provability used in the proof of the first incompleteness theorem can be formalized within the system using a formal predicate for provability. Once this is done, the second incompleteness theorem follows by formalizing the entire proof of the first incompleteness theorem within the system itself.
+
+Let p stand for the undecidable sentence constructed above, and assume that the consistency of the system can be proved from within the system itself. The demonstration above shows that if the system is consistent, then p is not provable. The proof of this implication can be formalized within the system, and therefore the statement "p is not provable", or "not P(p)" can be proved in the system.
+
+But this last statement is equivalent to p itself (and this equivalence can be proved in the system), so p can be proved in the system. This contradiction shows that the system must be inconsistent.
+\end{document}
